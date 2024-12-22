@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/gui/main_menu.tres" type="FontFile" id=1]
+[ext_resource path="res://src/gui/default.theme" type="Theme" id=2]
+[ext_resource path="res://src/gui/pause_menu.gd" type="Script" id=3]
+[ext_resource path="res://src/gui/opcoesMenu.tscn" type="PackedScene" id=4]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.164706, 0.164706, 0.164706, 0.498039 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+theme_override_constants/margin_top = 86
+theme_override_constants/margin_left = 68
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+offset_left = 68.0
+offset_top = 86.0
+offset_right = 368.0
+offset_bottom = 413.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+offset_right = 300.0
+offset_bottom = 77.0
+custom_minimum_size = Vector2( 300, 0 )
+theme_override_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+text = "[color=#fec400]Pause[/color]"
+text = "Pause"
+fit_content_height = true
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+offset_top = 85.0
+offset_right = 300.0
+offset_bottom = 171.0
+theme_override_constants/margin_bottom = 86
+
+[node name="ResumeBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+offset_top = 179.0
+offset_right = 227.0
+offset_bottom = 223.0
+size_flags_horizontal = 0
+text = "Resume Game"
+align = 0
+
+[node name="SettingsBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+offset_top = 231.0
+offset_right = 127.0
+offset_bottom = 275.0
+size_flags_horizontal = 0
+text = "Settings"
+align = 0
+
+[node name="QuitBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+offset_top = 283.0
+offset_right = 71.0
+offset_bottom = 327.0
+size_flags_horizontal = 0
+text = "Quit"
+align = 0
+
+[node name="SettingsMenu" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsBtn" to="." method="_on_SettingsBtn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]

@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fonts/PixelOperator8-Bold.ttf" type="FontFile" id=1]
+[ext_resource path="res://imagem/logoM83.png" type="Texture2D" id=2]
+[ext_resource path="res://imagem/logoIFPlay.png" type="Texture2D" id=3]
+[ext_resource path="res://imagem/spaceSobre.jpg" type="Texture2D" id=4]
+[ext_resource path="res://music/BrandonMorris-LoadingScreenLoop-cc0-qmix.mp3" type="AudioStream" id=5]
+[ext_resource path="res://sobre.gd" type="Script" id=6]
+
+[sub_resource type="FontFile" id=1]
+spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="FontFile" id=2]
+size = 30
+outline_color = Color( 0.862745, 0.521569, 0.972549, 1 )
+font_data = ExtResource( 1 )
+
+[node name="sobre" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 1913.0
+offset_bottom = 1074.0
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -198.0
+offset_right = 318.0
+offset_bottom = 198.0
+clip_contents = false
+size_flags_horizontal = 8
+theme_override_colors/default_color = Color( 0.854902, 0.631373, 0.988235, 1 )
+theme_override_fonts/normal_font = SubResource( 1 )
+tab_size = 5
+text = "Bem-vindo ao mundo de M83, um jogo educativo digital em 2d, ou seja, objetos e entidades com duas dimensões desenvolvido para computadores com o objetivo de auxiliar no ensino da astronomia entre os alunos do ensino fundamental II. O jogo está sendo desenvolvido e mantido pelo grupo IFPlay da disciplina de Projeto Integrador III do técnico em informática integrado ao ensino médio do Instituto Federal do Rio Grande do Sul - Campus Erechim."
+scroll_active = false
+
+[node name="logoM83" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.5
+offset_right = 70.5
+offset_bottom = 120.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="logoIFPlay" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -94.0
+offset_right = 83.0
+offset_bottom = 27.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="menuInicialButton" type="Button" parent="."]
+modulate = Color( 0.964706, 0.658824, 0.992157, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -125.0
+offset_right = 149.0
+offset_bottom = -79.0
+theme_override_fonts/font = SubResource( 2 )
+text = "Menu Inicial"
+
+[connection signal="pressed" from="menuInicialButton" to="." method="_on_menuInicialButton_pressed"]

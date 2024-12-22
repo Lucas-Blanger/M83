@@ -3,7 +3,7 @@ extends Node
 signal fps_display(value)
 
 func toggle_fullscreen(value):
-	OS.window_fullscreen = value
+	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (value) else Window.MODE_WINDOWED
 
 	
 func toggle_fps_display(value):

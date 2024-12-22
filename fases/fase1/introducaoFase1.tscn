@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://imagem/mercurio.png" type="Texture2D" id=1]
+[ext_resource path="res://fases/fase1/introducaoFase1.gd" type="Script" id=2]
+
+[node name="introducaof1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = -25.0
+offset_right = 1185.0
+offset_bottom = 662.0
+texture = ExtResource( 1 )
+
+[node name="texto" type="RichTextLabel" parent="background"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="seguirButton" type="Button" parent="background"]
+offset_left = 455.0
+offset_top = 405.0
+offset_right = 627.0
+offset_bottom = 474.0
+text = "Seguir"
+
+[connection signal="pressed" from="background/seguirButton" to="." method="_on_seguirButton_pressed"]
