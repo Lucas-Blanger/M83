@@ -1,24 +1,24 @@
 extends Popup
 
 # Configuracoes de video
-@onready var opcoesExibicao = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/modoExibicaoButton"
-@onready var vsyncButton = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/vsyncButton"
-@onready var exibirFps = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/exbirFpsButton"
-@onready var maxFpsVal = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/HBoxContainer/maxFpsSlider"
-@onready var maxFpsSlider = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/HBoxContainer/maxFpsSlider"
-@onready var iluminacaoButton = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/iluminacaoButton"
-@onready var brilhoSlider = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/brilhoSlider"
+onready var opcoesExibicao = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/modoExibicaoButton"
+onready var vsyncButton = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/vsyncButton"
+onready var exibirFps = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/exbirFpsButton"
+onready var maxFpsVal = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/HBoxContainer/maxFpsSlider"
+onready var maxFpsSlider = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/HBoxContainer/maxFpsSlider"
+onready var iluminacaoButton = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/iluminacaoButton"
+onready var brilhoSlider = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/brilhoSlider"
 
 # Configuracoes de audio
-@onready var volumeGeralSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/volumeSlider"
-@onready var musicaVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/musicVolSlider"
-@onready var efeitosVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/efeitosVolSlider"
+onready var volumeGeralSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/volumeSlider"
+onready var musicaVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/musicVolSlider"
+onready var efeitosVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/efeitosVolSlider"
 
 # Configuracoes de jogo
-@onready var campoVisaoVal = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer2/campoVisaoVal"
-@onready var campoVisaoSlider = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer2/campoVisaoSlider"
-@onready var mouseSenseVal = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer3/mouseSenseVal"
-@onready var mouseSenseSlider = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer3/mouseSenseSlider"
+onready var campoVisaoVal = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer2/campoVisaoVal"
+onready var campoVisaoSlider = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer2/campoVisaoSlider"
+onready var mouseSenseVal = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer3/mouseSenseVal"
+onready var mouseSenseSlider = $"configuracoesTabs/Jogo/MarginContainer/jogoConfiguracao/HBoxContainer3/mouseSenseSlider"
 
 func _ready():
 	pass

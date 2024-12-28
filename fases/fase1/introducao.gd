@@ -17,4 +17,8 @@ func _ready():
 
 
 func _on_proximoButton_pressed():
-	get_tree().change_scene_to_file("res://fases/fase1/introducaoFase1.tscn")
+	get_tree().change_scene("res://fases/fase1/fase1.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://fases/fase1/fase1.tscn")

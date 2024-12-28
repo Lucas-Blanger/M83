@@ -8,13 +8,13 @@ signal mouse_sens_updated(value)
 
 
 func toggle_fullscreen(toggle):
-	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (toggle) else Window.MODE_WINDOWED
+	OS.window_fullscreen = toggle
 	Save.game_data.fullscreen_on = toggle
 	Save.save_data()
 	
 	
 func toggle_vsync(toggle):
-	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if (toggle) else DisplayServer.VSYNC_DISABLED)
+	OS.vsync_enabled = toggle
 	Save.game_data.vsync_on = toggle
 	Save.save_data()
 	

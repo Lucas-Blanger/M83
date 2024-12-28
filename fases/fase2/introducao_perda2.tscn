@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fases/fase2/introducao_perda2.gd" type="Script" id=1]
+[ext_resource path="res://fonts/PixelOperator8-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://imagem/introducao_pixel.png" type="Texture" id=3]
+[ext_resource path="res://imagem/nave2.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0.301961, 0.105882, 0.419608, 1 )
+font_data = ExtResource( 2 )
+
+[node name="introducao" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="background" type="TextureRect" parent="."]
+margin_left = -30.0
+margin_top = -128.0
+margin_right = 3011.0
+margin_bottom = 1123.0
+texture = ExtResource( 3 )
+
+[node name="texto" type="RichTextLabel" parent="."]
+modulate = Color( 0.301961, 0.105882, 0.419608, 1 )
+anchor_right = 0.07
+anchor_bottom = 0.065
+margin_left = 23.0
+margin_top = 5.0
+margin_right = 943.0
+margin_bottom = 510.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Infelizmente você errou uma questão e precisa estudar um pouco mais sobre Vênus.
+
+Leia cuidadosamente o texto abaixo:
+
+Ele é conhecido desde a antiguidade por ser o planeta mais brilhante e visível no céu, pois a sua espessa atmosfera reflete intensamente a luz do Sol, gerando seu brilho peculiar. 
+
+Tal atmosfera é composta de dióxido de carbono (97% da composição atmosférica do planeta) e ácido sulfúrico, estes que formam nuvens densas que  causam o efeito estufa, no qual o calor é impedido de ser irradiado para fora, tornando o planeta muito quente: cerca de 482 ºC de temperatura na superfície.
+
+Sua topografia é composta por planícies revestidas por lava, bem como regiões montanhosas, estas deformadas pelas atividades geológicas.
+
+Tenha uma ótima viagem!
+"
+
+[node name="proximoButton" type="Button" parent="."]
+modulate = Color( 0.858824, 0.254902, 0.901961, 1 )
+margin_left = 384.0
+margin_top = 570.0
+margin_right = 617.0
+margin_bottom = 606.0
+text = "Clique na nave para continuar"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 461.0
+margin_top = 475.0
+margin_right = 551.0
+margin_bottom = 572.0
+texture_normal = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[connection signal="pressed" from="proximoButton" to="." method="_on_proximoButton_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

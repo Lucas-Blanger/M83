@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_menuInicialButton_pressed():
-	get_tree().change_scene_to_file("res://Node2D.tscn")
+	get_tree().change_scene("res://Node2D.tscn")

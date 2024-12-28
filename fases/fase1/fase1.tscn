@@ -1,12 +1,32 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://imagem/mercuriof1.png" type="Texture2D" id=1]
+[ext_resource path="res://imagem/mercuriof1.png" type="Texture" id=1]
 [ext_resource path="res://fases/fase1/Jogador.tscn" type="PackedScene" id=2]
-[ext_resource path="res://imagem/spaceSobre.jpg" type="Texture2D" id=3]
-[ext_resource path="res://imagem/nave.png" type="Texture2D" id=4]
+[ext_resource path="res://imagem/spaceSobre.jpg" type="Texture" id=3]
+[ext_resource path="res://src/objetos/Portal2d.tscn" type="PackedScene" id=4]
+[ext_resource path="res://imagem/paraquedas.png" type="Texture" id=5]
+[ext_resource path="res://src/objetos/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UserInterface.tscn" type="PackedScene" id=7]
+[ext_resource path="res://fases/fase1/quiz_game.tscn" type="PackedScene" id=8]
+[ext_resource path="res://imagem/mercurio(1).png" type="Texture" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PackedVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 80, 80, 0, 80, 0, 0, 80, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 640, 80, 0, 80, 0, 0, 640, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 160, 80, 0, 80, 0, 0, 160, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 640, 160, 0, 160, 0, 0, 640, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 160, 80, 0, 80, 0, 0, 160, 0 )
 
 [sub_resource type="TileSet" id=2]
 0/name = "mercuriof1.png 0"
@@ -19,28 +39,156 @@ points = PackedVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 1 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+1/name = "mercurio(1).png 1"
+1/texture = ExtResource( 9 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 560, 240, 80, 80 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 4 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "mercurio(1).png 2"
+2/texture = ExtResource( 9 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 400, 240, 640, 80 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 5 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "mercurio(1).png 3"
+3/texture = ExtResource( 9 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 480, 400, 160, 160 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 6 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "mercurio(1).png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 400, 320, 640, 160 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 7 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "mercurio(1).png 5"
+5/texture = ExtResource( 9 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 800, 320, 80, 80 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "mercurio(1).png 6"
+6/texture = ExtResource( 9 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 640, 160, 160, 80 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 8 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
 
 [node name="FaseTemplate" type="Node2D"]
+
+[node name="Paraquedas" type="Sprite" parent="."]
+position = Vector2( 102, 407 )
+scale = Vector2( 0.523077, 0.628 )
+texture = ExtResource( 5 )
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="PauseMenu" instance=ExtResource( 7 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = -50.0
-offset_top = -85.0
-offset_right = 1870.0
-offset_bottom = 995.0
+margin_left = -50.0
+margin_top = -85.0
+margin_right = 1870.0
+margin_bottom = 995.0
 texture = ExtResource( 3 )
 
 [node name="Jogador" parent="." instance=ExtResource( 2 )]
@@ -53,11 +201,67 @@ tile_set = SubResource( 2 )
 cell_size = Vector2( 80, 80 )
 collision_mask = 2
 format = 1
-tile_data = PackedInt32Array( -131046, 0, 0, -65510, 0, 0, 26, 0, 0, 131071, 0, 0, 65562, 0, 0, 196607, 0, 0, 131087, 0, 0, 131088, 0, 0, 131098, 0, 0, 262143, 0, 0, 196618, 0, 0, 196619, 0, 0, 196634, 0, 0, 327679, 0, 0, 262151, 0, 0, 262152, 0, 0, 262157, 0, 0, 262158, 0, 0, 262161, 0, 0, 262162, 0, 0, 262165, 0, 0, 262166, 0, 0, 262170, 0, 0, 393215, 0, 0, 327706, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0 )
+tile_data = PoolIntArray( 65530, 1, 0, 65531, 1, 0, 131066, 1, 0, 131067, 1, 0, 131068, 1, 0, 65624, 3, 0, 65625, 3, 0, 196602, 1, 0, 196603, 1, 0, 196604, 1, 0, 131087, 6, 0, 131160, 3, 0, 131161, 3, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 196618, 6, 0, 196633, 6, 0, 196653, 6, 0, 196671, 6, 0, 196694, 3, 0, 196695, 3, 0, 196696, 3, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 262151, 6, 0, 262157, 6, 0, 262162, 6, 0, 262165, 6, 0, 262172, 6, 0, 262182, 1, 0, 262185, 6, 0, 262193, 1, 0, 262196, 1, 0, 262200, 1, 0, 262203, 6, 0, 262230, 3, 0, 262232, 3, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327711, 1, 0, 327715, 6, 0, 327746, 6, 0, 327751, 6, 0, 327768, 3, 0, 458743, 4, 0, 458751, 4, 0, 393223, 4, 0, 393231, 4, 0, 393239, 4, 0, 393245, 1, 0, 393246, 1, 0, 393247, 4, 0, 393255, 4, 0, 393263, 4, 0, 393271, 4, 0, 393279, 4, 0, 393287, 4, 0, 393295, 4, 0, 393303, 3, 0, 393304, 3, 0, 589815, 3, 0, 589816, 3, 0, 589817, 3, 0, 589818, 3, 0, 589819, 3, 0, 589820, 3, 0, 589821, 3, 0, 589823, 3, 0, 524289, 3, 0, 524290, 3, 0, 524292, 3, 0, 524294, 3, 0, 524296, 3, 0, 524298, 3, 0, 524300, 3, 0, 524302, 3, 0, 524304, 3, 0, 524305, 3, 0, 524306, 3, 0, 524307, 3, 0, 524308, 3, 0, 524309, 3, 0, 524310, 3, 0, 524311, 3, 0, 524312, 3, 0, 524313, 3, 0, 524314, 3, 0, 524315, 3, 0, 524317, 3, 0, 524319, 3, 0, 524321, 3, 0, 524322, 3, 0, 524323, 3, 0, 524324, 3, 0, 524325, 3, 0, 524326, 3, 0, 524327, 3, 0, 524328, 3, 0, 524329, 3, 0, 524330, 3, 0, 524331, 3, 0, 524332, 3, 0, 524333, 3, 0, 524334, 3, 0, 524335, 3, 0, 524336, 3, 0, 524337, 3, 0, 524338, 3, 0, 524339, 3, 0, 524340, 3, 0, 524341, 3, 0, 524342, 3, 0, 524343, 3, 0, 524344, 3, 0, 524345, 3, 0, 524346, 3, 0, 524347, 3, 0, 524348, 3, 0, 524349, 3, 0, 524350, 3, 0, 524351, 3, 0, 524352, 3, 0, 524353, 3, 0, 524354, 3, 0, 524355, 3, 0, 524356, 3, 0, 524357, 3, 0, 524358, 3, 0, 524359, 3, 0, 524360, 3, 0, 524361, 3, 0, 524363, 3, 0, 524364, 3, 0, 524365, 3, 0, 524366, 3, 0, 524367, 3, 0, 524368, 3, 0, 524369, 3, 0, 524370, 3, 0, 524371, 3, 0, 524372, 3, 0, 524373, 3, 0, 524374, 3, 0, 524375, 3, 0, 524376, 3, 0 )
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = -191.0
-offset_top = 92.0
-offset_right = 421.0
-offset_bottom = 500.0
-texture = ExtResource( 4 )
+[node name="Coin" parent="." instance=ExtResource( 6 )]
+position = Vector2( 648, 276 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 756, 449 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1112, 267 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3077, 274 )
+
+[node name="Coin5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1327, 434 )
+
+[node name="Coin6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2072, 449 )
+
+[node name="Coin10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2142, 449 )
+
+[node name="Coin11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2142, 449 )
+
+[node name="Coin7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2083, 191 )
+
+[node name="Coin8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2514, 361 )
+
+[node name="Coin12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3815, 396 )
+
+[node name="Coin15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3932, 263 )
+
+[node name="Coin17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4986, 425 )
+
+[node name="Coin18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5551, 441 )
+
+[node name="Coin19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6027, 333 )
+
+[node name="Coin16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4202, 269 )
+
+[node name="Coin13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4529, 282 )
+
+[node name="Coin14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4529, 282 )
+
+[node name="Coin9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3703, 196 )
+
+[node name="Portal2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6437, 499 )
+next_scene = ExtResource( 8 )
+
+[editable path="Coin"]

@@ -1,8 +1,8 @@
 extends Control
 
-var is_paused = false: set = set_paused
+var is_paused = false setget set_paused
 
-@onready var settings_menu = $SettingsMenu
+onready var settings_menu = $SettingsMenu
 
 func _ready():
 	hide()

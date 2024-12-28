@@ -1,6 +1,6 @@
 extends actor
 
-@export var stomp_impulse: = 600.0
+export var stomp_impulse: = 600.0
 
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 		_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/resource/res_question.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Como é composta a superfície e a atmosfera de Vênus?"
+type = 0
+options = [ "Por oceanos e compostos semelhantes aos da Terra.", "Por lava, regiões montanhosas, dióxido de carbono e ácido sulfúrico.", "Por lava, crateras de grande magnitude, oxigênio e hidrogênio." ]
+correct = "Por lava, regiões montanhosas, dióxido de carbono e ácido sulfúrico."

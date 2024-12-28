@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/resource/res_question.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Por que Vênus é o planeta mais visível no céu?"
+type = 0
+options = [ "Pois sua espessa atmosfera reflete a luz do sol.", "Por conta de sua superfície ser muito quente.", "Por conta de seus altos complexos montanhosos." ]
+correct = "Pois sua espessa atmosfera reflete a luz do sol."

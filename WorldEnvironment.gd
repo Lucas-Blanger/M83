@@ -1,8 +1,8 @@
 extends WorldEnvironment
 
 func _ready():
-	ConfiguracoesGerais.connect("iluminacaoToggled", Callable(self, "_on_iluminacaoToggled"))
-	ConfiguracoesGerais.connect("brilhoUpdate", Callable(self, "_on_brilhoUpdate"))
+	ConfiguracoesGerais.connect("iluminacaoToggled", self, "_on_iluminacaoToggled")
+	ConfiguracoesGerais.connect("brilhoUpdate", self, "_on_brilhoUpdate")
 	
 
 func _on_iluminacaoToggled(value):

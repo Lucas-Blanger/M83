@@ -9,11 +9,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -460.0
-offset_top = -295.0
-offset_right = 460.0
-offset_bottom = 295.0
-custom_minimum_size = Vector2( 920, 590 )
+margin_left = -460.0
+margin_top = -295.0
+margin_right = 460.0
+margin_bottom = 295.0
+rect_min_size = Vector2( 920, 590 )
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -25,94 +25,94 @@ color = Color( 0.254902, 0.254902, 0.258824, 1 )
 [node name="configuracoesTabs" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-tab_alignment = 0
+tab_align = 0
 
-[node name="Vídeo" type="TabBar" parent="configuracoesTabs"]
+[node name="Vídeo" type="Tabs" parent="configuracoesTabs"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 43.0
-offset_right = -4.0
-offset_bottom = -4.0
+margin_left = 4.0
+margin_top = 43.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="MarginContainer" type="MarginContainer" parent="configuracoesTabs/Vídeo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_bottom = 25
+custom_constants/margin_right = 25
+custom_constants/margin_top = 25
+custom_constants/margin_left = 25
+custom_constants/margin_bottom = 25
 
 [node name="videoConfiguracoes" type="GridContainer" parent="configuracoesTabs/Vídeo/MarginContainer"]
-offset_left = 25.0
-offset_top = 25.0
-offset_right = 887.0
-offset_bottom = 518.0
-theme_override_constants/v_separation = 20
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 887.0
+margin_bottom = 518.0
+custom_constants/vseparation = 20
 columns = 2
 
 [node name="exibicaoModoLabel" type="Label" parent="configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes"]
-offset_right = 278.0
-offset_bottom = 44.0
+margin_right = 278.0
+margin_bottom = 44.0
 text = "Modo de Exibição"
 
 [node name="modoExibicaoButton" type="OptionButton" parent="configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes"]
-offset_left = 748.0
-offset_right = 862.0
-offset_bottom = 44.0
+margin_left = 748.0
+margin_right = 862.0
+margin_bottom = 44.0
 size_flags_horizontal = 10
 text = "Janela"
 items = [ "Janela", null, false, 0, null, "Tela Cheia", null, false, 1, null ]
 selected = 0
 
 [node name="exbirFpsLabel" type="Label" parent="configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes"]
-offset_top = 64.0
-offset_right = 278.0
-offset_bottom = 108.0
+margin_top = 64.0
+margin_right = 278.0
+margin_bottom = 108.0
 text = "Exibir FPS"
 
 [node name="exbirFpsButton" type="CheckButton" parent="configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes"]
-offset_left = 798.0
-offset_top = 64.0
-offset_right = 862.0
-offset_bottom = 108.0
+margin_left = 798.0
+margin_top = 64.0
+margin_right = 862.0
+margin_bottom = 108.0
 size_flags_horizontal = 10
 
-[node name="Áudio" type="TabBar" parent="configuracoesTabs"]
+[node name="Áudio" type="Tabs" parent="configuracoesTabs"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 43.0
-offset_right = -4.0
-offset_bottom = -4.0
+margin_left = 4.0
+margin_top = 43.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="MarginContainer" type="MarginContainer" parent="configuracoesTabs/Áudio"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_bottom = 25
+custom_constants/margin_right = 25
+custom_constants/margin_top = 25
+custom_constants/margin_left = 25
+custom_constants/margin_bottom = 25
 
 [node name="audioConfiguracao" type="GridContainer" parent="configuracoesTabs/Áudio/MarginContainer"]
-offset_left = 25.0
-offset_top = 25.0
-offset_right = 887.0
-offset_bottom = 518.0
-theme_override_constants/v_separation = 20
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 887.0
+margin_bottom = 518.0
+custom_constants/vseparation = 20
 columns = 2
 
 [node name="volumeLabel" type="Label" parent="configuracoesTabs/Áudio/MarginContainer/audioConfiguracao"]
-offset_right = 287.0
-offset_bottom = 44.0
+margin_right = 287.0
+margin_bottom = 44.0
 text = "Volume Geral"
 
 [node name="volumeSlider" type="HSlider" parent="configuracoesTabs/Áudio/MarginContainer/audioConfiguracao"]
-offset_left = 462.0
-offset_right = 862.0
-offset_bottom = 44.0
-custom_minimum_size = Vector2( 400, 0 )
+margin_left = 462.0
+margin_right = 862.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 400, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
 min_value = -50.0
@@ -120,17 +120,17 @@ max_value = 0.0
 value = -10.0
 
 [node name="musicVoleLabel" type="Label" parent="configuracoesTabs/Áudio/MarginContainer/audioConfiguracao"]
-offset_top = 64.0
-offset_right = 287.0
-offset_bottom = 108.0
+margin_top = 64.0
+margin_right = 287.0
+margin_bottom = 108.0
 text = "Volume da Música"
 
 [node name="musicVolSlider" type="HSlider" parent="configuracoesTabs/Áudio/MarginContainer/audioConfiguracao"]
-offset_left = 462.0
-offset_top = 64.0
-offset_right = 862.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 400, 0 )
+margin_left = 462.0
+margin_top = 64.0
+margin_right = 862.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 400, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
 min_value = -50.0

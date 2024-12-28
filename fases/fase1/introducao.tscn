@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://imagem/introducao.png" type="Texture2D" id=1]
-[ext_resource path="res://fonts/PixelOperator8-Bold.ttf" type="FontFile" id=2]
+[ext_resource path="res://imagem/introducao_pixel.png" type="Texture" id=1]
+[ext_resource path="res://fonts/PixelOperator8-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fases/fase1/introducao.gd" type="Script" id=3]
+[ext_resource path="res://imagem/nave2.png" type="Texture" id=4]
 
-[sub_resource type="FontFile" id=1]
+[sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0.301961, 0.105882, 0.419608, 1 )
 font_data = ExtResource( 2 )
 
@@ -14,29 +15,52 @@ anchor_bottom = 1.0
 script = ExtResource( 3 )
 
 [node name="background" type="TextureRect" parent="."]
-offset_left = -13.0
-offset_top = 3.0
-offset_right = 2638.0
-offset_bottom = 1083.0
+margin_left = -30.0
+margin_top = -128.0
+margin_right = 3011.0
+margin_bottom = 1123.0
 texture = ExtResource( 1 )
 
-[node name="texto" type="RichTextLabel" parent="background"]
+[node name="texto" type="RichTextLabel" parent="."]
 modulate = Color( 0.301961, 0.105882, 0.419608, 1 )
 anchor_right = 0.07
 anchor_bottom = 0.065
-offset_left = 435.0
-offset_top = 146.0
-offset_right = 524.43
-offset_bottom = 277.8
-theme_override_fonts/normal_font = SubResource( 1 )
-text = "Bem vindo ao M83- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+margin_left = 23.0
+margin_top = 5.0
+margin_right = 943.0
+margin_bottom = 510.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Mercúrio possui esse nome que lhe foi dado pelos romanos. Era o nome do veloz mensageiro dos deuses. A este planeta foi atribuído este nome pois os romanos perceberam o quão rápido o planeta Mercúrio se movia.
 
-[node name="proximoButton" type="Button" parent="background"]
-modulate = Color( 0.552941, 0.301961, 0.701961, 1 )
-offset_left = 449.0
-offset_top = 261.0
-offset_right = 682.0
-offset_bottom = 297.0
-text = "Clique aqui para continuar"
+Mercúrio é o planeta mais próximo do Sol e o menor planeta do Sistema Solar. Essa proximidade do planeta com o Sol faz com que a vida seja uma possibilidade muito distante, já que há uma grande variação de temperatura, instabilidades climáticas, uma superfície escura e uma atmosfera fraca.
 
-[connection signal="pressed" from="background/proximoButton" to="." method="_on_proximoButton_pressed"]
+A temperatura em Mercúrio é de aproximadamente 430 °C na parte iluminada e de -170 °C na parte escura. Ele é constituído, em grande parte, por ferro. Por esse motivo, ele é chamado de Iron Planet. Além disso, ele é o planeta mais veloz do Sistema Solar. Ele é capaz de realizar 47,87 quilômetros por segundo em torno do Sol.
+
+Sua superfície assemelha-se a da lua, sendo muito rochosa, com a presença de crateras e poeira, em decorrência do bombardeamento de meteoritos. A atmosfera é muito fina, pois sua gravidade baixa: 3,7 m/s², as temperaturas elevadas e sua massa muito pequena impulsionou seu desaparecimento. O céu em mercúrio é sempre negro por conta da sua atmosferam muito rarefeita, não suficiente para a dispersão da luz. A atmosfera é composta de hélio, sódio, hidrogênio molecular e oxigênio molecular.
+
+A duração de um dia em Mercúrio é o equivalente a 59 dias na Terra, e a duração de um ano em Mercúrio é o equivalente a 88 dias na Terra.
+
+
+Tenha uma ótima viagem!"
+
+[node name="proximoButton" type="Button" parent="."]
+modulate = Color( 0.858824, 0.254902, 0.901961, 1 )
+margin_left = 384.0
+margin_top = 570.0
+margin_right = 617.0
+margin_bottom = 606.0
+text = "Clique na nave para continuar"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 461.0
+margin_top = 475.0
+margin_right = 551.0
+margin_bottom = 572.0
+texture_normal = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[connection signal="pressed" from="proximoButton" to="." method="_on_proximoButton_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -1,12 +1,12 @@
 extends Popup
 
 # Configuracoes de video
-@onready var opcoesExibicao = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/modoExibicaoButton"
-@onready var exibirFps = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/exbirFpsButton"
+onready var opcoesExibicao = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/modoExibicaoButton"
+onready var exibirFps = $"configuracoesTabs/Vídeo/MarginContainer/videoConfiguracoes/exbirFpsButton"
 
 # Configuracoes de audio
-@onready var volumeGeralSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/volumeSlider"
-@onready var musicaVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/musicVolSlider"
+onready var volumeGeralSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/volumeSlider"
+onready var musicaVolSlider = $"configuracoesTabs/Áudio/MarginContainer/audioConfiguracao/musicVolSlider"
 
 func _ready():
 	pass
